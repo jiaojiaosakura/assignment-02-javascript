@@ -19,6 +19,11 @@ function returnObject (first, last, prof) {
   // o.firstName = first
   // etc.
   // don't forget to return the object
+  var obj = {};
+  obj.firstName = first;
+  obj.lastName = last;
+  obj.profession = prof;
+  return obj;
 }
 
 
@@ -110,7 +115,7 @@ function prettyIterator (aString, aNumber) {
 
 
 // Problem 6
-// Write a function that, when passed an object 
+// Write a function that, when passed an object
 // with attributes "fullName", "from", and "to", returns the string
 // "object.fullName's reign was N years long."
 // where "N" is the difference between from and to.
@@ -175,7 +180,7 @@ function computeReign (pm) {
 //   from: "1921",
 //   to: "1926"
 // }];
-// 
+//
 // sentences (ministers);
 
 // it should return:
