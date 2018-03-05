@@ -121,6 +121,11 @@ function stringIterator (aString, aNumber) {
 
 function prettyIterator (aString, aNumber) {
   // be sure to check your results on this one; it has a trick.
+  var result = "";
+  for (var i = 1; i<=aNumber; i++) {
+    result = result + aString + "(" + i + ")\n";
+  }
+  return result;
 }
 
 
@@ -160,6 +165,8 @@ function computeReign (pm) {
   // attributes and variables. remember that you may need to
   // "escape" the ' with \'
   // finally, makre sure you return the sentence as the value of the function
+  var result = pm.fullName + "'s reign was " + (pm.to-pm.from) + " years long.";
+  return result;
 }
 
 
