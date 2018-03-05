@@ -1,7 +1,12 @@
 // use this helper function to create <a> tags inside a given node
 function addLink(node, text, url) {
     // clear the node of text; create a new "a" node; add the appropriate attributes;
-    // append the new node as a child; return the original node.  
+    // append the new node as a child; return the original node.
+    node.innerHTML = "";
+    var anode = document.createElement ("a");
+    anode.innerHTML = text;
+    anode.setAttribute ('href', url);
+    node.appendChild (anode);
     return node;
 }
 
@@ -12,12 +17,12 @@ function wikify(text) {
 }
 
 
-// take a class name as parameter, and linkify all such classes.  
+// take a class name as parameter, and linkify all such classes.
 function linkifyClass (c) {
     // get all elements of class c; loop through elements;
     // add link to each element
-    
-    // no need for a return value. 
+
+    // no need for a return value.
 }
 
 // to actually do the work, we would call the function
@@ -26,7 +31,7 @@ function linkifyClass (c) {
 // You can probably link all of the fields if you want:
 var classesToWikify = ["PM", "Party", "From", "To"];
 
-// what would you need to do next? Solution is left for the reader. 
+// what would you need to do next? Solution is left for the reader.
 
 // regardless, we'll create a meta-function that will be called when
 // index.html hs finished loading entirely
@@ -49,4 +54,3 @@ exports.addLink = addLink;
 exports.wikify = wikify;
 exports.linkifyClass = linkifyClass;
 exports.updatePage = updatePage;
-
