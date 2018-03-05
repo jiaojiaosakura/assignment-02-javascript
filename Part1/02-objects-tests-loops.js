@@ -50,6 +50,7 @@ function objectToSentence (obj) {
   // obj.propertyname
   // note the quotes in the first version
   var sentence = obj.firstName + " " + obj.lastName + " was a " + obj.profession + ".";
+  return sentence;
 }
 
 
@@ -76,6 +77,12 @@ function wasWriter (obj) {
   // "return" statement inside the conditional braces
   // so you can, e.g.,
   // if (...) {return A} else {return B}
+  if (obj.profession === "novelist") {
+    return obj.firstName + " " + obj.lastName + " was a writer.";
+  }
+  else {
+    return obj.firstName + " " + obj.lastName + " was not a writer.";
+  }
 }
 
 
