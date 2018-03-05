@@ -13,7 +13,9 @@ function addLink(node, text, url) {
 // another helper function, if you want to replace spaces w/ "_"
 function wikify(text) {
     // replace spaces w/ "_"; concatenate w/ Wikipedia prefix; return concatenated string
-    return;
+    var words = text.split(" ");
+    var result = words.join("_");
+    return result;
 }
 
 
