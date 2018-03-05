@@ -25,6 +25,11 @@ function linkifyClass (c) {
     // add link to each element
 
     // no need for a return value.
+    var tagList = document.getElementsByClassName (c);
+    for (var i = 0; i<tagList.length; i++){
+      var tagtext = tagList[i].innerHTML;
+      addLink (tagList[i], tagtext, "https://en.wikipedia.org/wiki/" + wikify (tagtext));
+    }
 }
 
 // to actually do the work, we would call the function
