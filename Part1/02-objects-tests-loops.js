@@ -213,6 +213,11 @@ function sentences(list) {
   // is to use the "for...of" loop syntax to loop through the array,
   // and the object[attribute] or object.attribute reference format to access
   // the internal components of the objects.
+  var result = "";
+  for (var obj of list) {
+    result = result + obj.fullName + "'s reign was " + (obj.to-obj.from) + " years long.\n";
+  }
+  return result;
 }
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
