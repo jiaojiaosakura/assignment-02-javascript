@@ -29,6 +29,7 @@
     // if you want you can declare a string variable first
     // or in this case you can just return the string directly
     // with something like "return 'Hello!'"
+    return "Hello!";
   }
 
 // Problem 2
@@ -41,6 +42,9 @@ function greeting(name) {
   // say goodbye, I might write
   // var parting = "Goodbye, " + name + ".";
   // (but of course, I actually want to say hello.)
+  var result = "Hello, " + name + "!";
+  return result;
+  // return "Hello, " + name;
 }
 
 // Problem 3
@@ -50,6 +54,8 @@ function greeting(name) {
 function returnArray (first, second, third) {
   // you can define the array using "new Array ()" or just "[ , , ]"
   // don't forget to return it
+  var myarray = [first, second, third];
+  return myarray;
 }
 
 
@@ -65,7 +71,8 @@ function splitArray (thisArray) {
   // array[0]
   // array[1]
   // etc.
-
+  var result = thisArray[0] +" "+thisArray[1] + " was a " + thisArray[2]+".";
+  return result;
 }
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
