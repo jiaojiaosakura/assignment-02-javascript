@@ -43,14 +43,13 @@ function returnObject (first, last, prof) {
 // note that the following would produce the same result:
 // objectToSentence(returnObject("Italo", "Calvino", "novelist""))
 // (hold that thought for later!)
-
-
 function objectToSentence (obj) {
   // remember you can refer to object properties using either of 2 methods
   // obj['propertyname']
   // or
   // obj.propertyname
   // note the quotes in the first version
+  var sentence = obj.firstName + " " + obj.lastName + " was a " + obj.profession + ".";
 }
 
 
