@@ -15,7 +15,7 @@ function wikify(text) {
     // replace spaces w/ "_"; concatenate w/ Wikipedia prefix; return concatenated string
     var words = text.split(" ");
     var result = words.join("_");
-    return result;
+    return "https://en.wikipedia.org/wiki/" + result;
 }
 
 
@@ -28,7 +28,7 @@ function linkifyClass (c) {
     var tagList = document.getElementsByClassName (c);
     for (var i = 0; i<tagList.length; i++){
       var tagtext = tagList[i].innerHTML;
-      addLink (tagList[i], tagtext, "https://en.wikipedia.org/wiki/" + wikify (tagtext));
+      addLink (tagList[i], tagtext, wikify (tagtext));
     }
 }
 
